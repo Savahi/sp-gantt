@@ -1,0 +1,46 @@
+<div id="myDiv" contenteditable="true">
+      <ul id="todolist">  
+        <li>Купить молоко</li>  
+        <li>Купить яйца</li>
+        <li>Починить дверь</li>
+        <li>Отредактировать список!</li>
+      </ul>
+    </div>
+
+
+<script>
+
+	let path = "/a/./b/../../c/";
+	var arr=[];
+    var items = path.split('/');
+    for( var i=0 ; i < items.length ; i++ ) {
+		let it = items[i];
+        if( it.length === 0 ) {
+			continue;
+		}
+        if( it === '.' ) {
+			continue;
+		}
+        if( it === '..' ) {
+			arr.pop();
+			continue;
+		}
+		arr.push(it);
+    }    
+
+	console.log('/'+arr.join('/'));
+
+	//console.log('/'+arr.join('/'));
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
